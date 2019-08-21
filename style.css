@@ -1,0 +1,136 @@
+body {
+	background-color: #12043c;
+	color: white;
+	margin: 0px;
+	overflow-x: hidden;
+}
+
+
+
+.navbar {
+  position: sticky;
+  top: 0px;
+  height: 60px;
+  width: 100%;
+  z-index: 1;
+}
+
+.hamburger {
+  /*width: 19%;
+  height: 100%;
+  margin-left: 70%;
+
+  overflow: hidden;*/
+  margin-right: 10px;	
+  margin-top: 0px;
+  height: 100%;
+  background-color: grey;
+  width: 100%;
+  position: relative;
+  top: 0px;
+}
+
+#hamburgerToggle {
+  position: absolute;
+  width: 35px;
+  height: 26px;
+  right: 5px;
+  top: 10px;
+  z-index: 3;
+  opacity: 0;
+}
+
+.bar {
+  position: relative;
+  width: 30px;
+  height: 4px;
+  margin-top: 6px;
+  margin-bottom: auto;
+  margin-right: 10px;
+  margin-left: auto;
+  top: 10px;
+  z-index: 2;
+  background-color: white;
+  transition: 0.3s;
+  transform-origin: 0% 50%;
+}
+
+.navLinks {
+  position: absolute;
+  text-decoration: none;
+  color: #eb4609;
+  top: 20vh;
+  left: 15vh;
+  font-family: "Quicksand", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+  transition: opacity 5s;
+  -webkit-transition: display 5s;
+  /*display: none;
+  				opacity: 0;*/
+}
+
+#projects {
+  top: 25vh;
+}
+
+#contactMe {
+  top: 30vh;
+}
+
+.overlay {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  background-color: #ebb709;
+  top: 0px;
+  left: 0px;
+  clip-path: circle(0% at 100% 0%);
+  transition: clip-path 0.5s ease-in-out;
+}
+
+.append {
+  height: 1000px;
+}
+
+#target {
+  display: inline-block;
+  border-right: 0.1em solid orange;
+  animation: 
+    typing .5s step-end infinite;
+  position: sticky;
+  font-size: 100px;
+  top: 250px;
+  left: 30px;
+  font-family: "Quicksand", sans-serif;
+}
+
+@keyframes typing {
+  from, to { border-color: transparent }
+	50% { border-color: orange }
+}
+
+#hamburgerToggle:checked ~ #top {
+  transform: rotate(43deg);
+}
+
+#hamburgerToggle:checked ~ #middle {
+  transition: 0.1s;
+  transform: scaleX(0);
+}
+
+#hamburgerToggle:checked ~ #bottom {
+  transform: rotate(-43deg);
+}
+
+#hamburgerToggle:hover ~ .bar {
+  background-color: #ebb709;
+}
+
+#hamburgerToggle:checked ~ .bar {
+  background-color: #eb4609;
+}
+
+#hamburgerToggle:checked ~ .overlay {
+  clip-path: circle(200% at 100% 0%);
+}

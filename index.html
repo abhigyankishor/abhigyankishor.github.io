@@ -4,164 +4,16 @@
 
 		<link href="https://fonts.googleapis.com/css?family=Quicksand:400,700&display=swap" rel="stylesheet">
 
-		<style>
-			body {
-			  background-color: #12043c;
-			  color: white;
-			  margin: 0px;
-			  overflow-x: hidden;
-			}
-
-			.navbar {
-			  position: sticky;
-			  top: 0px;
-			  height: 60px;
-			  width: 100%;
-			  z-index: 1;
-			}
-
-			.name {
-			  position:  relative;
-			  padding-left: 1%;
-			  width: 80%;
-			  height: 100%;
-			  float: left;
-			  font-family: "Quicksand", sans-serif;
-			  font-size: 30px;
-			  font-weight: 700;
-			  transition: 1s;
-			/*   display: none; */
-			  opacity: 0;
-			/*   z-index: 300; */
-			}
-
-			.hamburger {
-			  width: 19%;
-			  height: 100%;
-			  margin-left: 70%;
-
-			  overflow: hidden;
-			}
-
-			#hamburgerToggle {
-			  position: absolute;
-			  width: 35px;
-			  height: 26px;
-			  right: 5px;
-			  top: 10px;
-			  z-index: 3;
-			  opacity: 0;
-			}
-
-			.bar {
-			  position: relative;
-			  width: 30px;
-			  height: 4px;
-			  margin-top: 6px;
-			  margin-bottom: auto;
-			  margin-right: 10px;
-			  margin-left: auto;
-			  top: 10px;
-			  z-index: 2;
-			  background-color: white;
-			  transition: 0.3s;
-			  transform-origin: 0% 50%;
-			}
-
-			.navLinks {
-			  position: absolute;
-			  text-decoration: none;
-			  color: #eb4609;
-			  top: 20vh;
-			  left: 15vh;
-			  font-family: "Quicksand", sans-serif;
-			  font-size: 25px;
-			  font-weight: 700;
-			  transition: opacity 5s;
-			  -webkit-transition: display 5s;
-			  /*display: none;
-			  				opacity: 0;*/
-			}
-
-			#projects {
-			  top: 25vh;
-			}
-
-			#contactMe {
-			  top: 30vh;
-			}
-
-			.overlay {
-			  position: absolute;
-			  width: 100vw;
-			  height: 100vh;
-			  background-color: #ebb709;
-			  top: 0px;
-			  left: 0px;
-			  clip-path: circle(0% at 100% 0%);
-			  transition: clip-path 0.5s ease-in-out;
-			}
-
-			.append {
-			  height: 1000px;
-			}
-
-			#target {
-			  display: inline-block;
-			  border-right: 0.1em solid orange;
-			  animation: 
-			    typing .5s step-end infinite;
-			  position: relative;
-			  font-size: 100px;
-			  top: 100px;
-			  left: 30px;
-			  font-family: "Quicksand", sans-serif;
-			}
-
-			@keyframes typing {
-			  from, to { border-color: transparent }
-				50% { border-color: orange }
-			}
-
-			#hamburgerToggle:checked ~ #top {
-			  transform: rotate(43deg);
-			}
-
-			#hamburgerToggle:checked ~ #middle {
-			  transition: 0.1s;
-			  transform: scaleX(0);
-			}
-
-			#hamburgerToggle:checked ~ #bottom {
-			  transform: rotate(-43deg);
-			}
-
-			#hamburgerToggle:hover ~ .bar {
-			  background-color: #ebb709;
-			}
-
-			#hamburgerToggle:checked ~ .bar {
-			  background-color: #eb4609;
-			}
-
-			#hamburgerToggle:checked ~ .overlay {
-			  clip-path: circle(200% at 100% 0%);
-			}
-
-
-
-			
-
-		</style>
+		<link rel="stylesheet" type="text/css" href="style.css">
 
 	</head>
 	<body>
 		
 		<div class="websiteContainer">
 		  <div class="navbar">
-		    <div class="name" id="navName">
+		    <!-- <div class="name" id="navName">
 		      Abhigyan Kishor
-		    </div>
+		    </div> -->
 		    <div class="hamburger">
 		      <input type="checkbox" id="hamburgerToggle" style="cursor:pointer;" />
 		      <div class="bar" id="top"></div>
@@ -177,69 +29,8 @@
 		  </div>
 		<!--   rest of code -->
 		  <div class="append"><div id="target"></div></div>
-		  <script type="text/javascript">
-			function toggleOverlay() {
-			  document.getElementById("hamburgerToggle").checked = false;
-			}
-			document.getElementById("aboutMe").addEventListener("click", toggleOverlay);
-			document.getElementById("projects").addEventListener("click", toggleOverlay);
-			document.getElementById("contactMe").addEventListener("click", toggleOverlay);
-
-
-			//typewriter stuff
-			var l = [
-			  "Software Dev",
-			  "Fullstack Dev",
-			  "Database Dev",
-			  "Graphic Design",
-			  "Abhigyan Kishor"
-			];
-			var i = 0;
-			var j = 0;
-			var target = document.getElementById("target");
-			var speed = 140;
-			var toggle = 0;
-
-			function word() {
-			  if (i == l[j].length - 1) {
-			    speed = 5000;
-			  }
-			  if (i >= l[j].length && toggle == 0) {
-			    // j++;
-			    if (j == 4) {
-			      clearInterval(timerId);
-			    }
-			    toggle = 1;
-			  }
-
-			  if (i == 0 && toggle == 1) {
-			    toggle = 0;
-			    speed = 140;
-			    j++;
-			  }
-			  if (toggle == 1) {
-			    let str = target.innerHTML;
-			    str = str.slice(0, -1);
-			    target.innerHTML = str;
-			    i--;
-			    speed = 20;
-			  }
-
-			  if (j > 4) {
-			    clearInterval(timerId);
-			  }
-			  if (i < l[j].length && toggle != 1) {
-			    target.innerHTML += l[j][i];
-			    i++;
-			  }
-
-			  let timerId = setTimeout(word, speed);
-			}
-
-			word();
-
-			//end of typewriter stuff		  	
-		  </script>
+		  <script src="script.js"></script>
+		  
 
 
 		</div>		
