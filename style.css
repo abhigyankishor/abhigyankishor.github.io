@@ -3,6 +3,10 @@ body {
 	color: white;
 	margin: 0px;
 	overflow-x: hidden;
+  background-image: url("images/Asset 6.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 /*.websiteContainer {
@@ -93,6 +97,7 @@ body {
 #append {
   height: 100vh;
   /*background-color: green;*/
+  
   position: sticky;
   top: 68px;
 }
@@ -109,9 +114,11 @@ body {
   font-family: "Quicksand", sans-serif;
 }
 
+
+
 .rest {
 	height: 2000px;
-	/*background-color: blue;*/
+	background-color: green;
 }
 
 @keyframes typing {
