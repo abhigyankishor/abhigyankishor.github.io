@@ -78,7 +78,7 @@ window.onscroll = function resizeAndMove(){
 	if (scrolled <= 100) {
 		var fontSize = 100 - 0.7*scrolled;
 		var targetTop = top - top*scrolled*0.01 - 60*scrolled*0.01;
-		console.log(targetTop);
+		// console.log(targetTop);
 		target.style.top = targetTop.toString() + "px";
 		target.style.fontSize = fontSize.toString() + "px";
 		target.style
