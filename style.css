@@ -5,14 +5,17 @@ body {
 	overflow-x: hidden;
 }
 
-
+/*.websiteContainer {
+	margin-top: 0px;
+}*/
 
 .navbar {
   position: sticky;
-  top: 0px;
+  top: 8px;
   height: 60px;
   width: 100%;
   z-index: 1;
+
 }
 
 .hamburger {
@@ -21,13 +24,11 @@ body {
   margin-left: 70%;
 
   overflow: hidden;*/
-  margin-right: 10px;	
-  margin-top: 0px;
   height: 100%;
-  background-color: grey;
+  
   width: 100%;
   position: relative;
-  top: 0px;
+  top: -8px;
 }
 
 #hamburgerToggle {
@@ -89,8 +90,11 @@ body {
   transition: clip-path 0.5s ease-in-out;
 }
 
-.append {
-  height: 1000px;
+#append {
+  height: 100vh;
+  /*background-color: green;*/
+  position: sticky;
+  top: 68px;
 }
 
 #target {
@@ -98,11 +102,16 @@ body {
   border-right: 0.1em solid orange;
   animation: 
     typing .5s step-end infinite;
-  position: sticky;
+  position: relative;
   font-size: 100px;
-  top: 250px;
+  top: 45vh;
   left: 30px;
   font-family: "Quicksand", sans-serif;
+}
+
+.rest {
+	height: 2000px;
+	/*background-color: blue;*/
 }
 
 @keyframes typing {

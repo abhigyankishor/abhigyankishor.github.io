@@ -66,6 +66,24 @@ word();
 
 //start of resizeAndMove
 
-// window.onscroll = function resizeAndMove(){
+
+window.onscroll = function resizeAndMove(){
 	
-// }
+	var winScroll = document.documentElement.scrollTop;
+	var height = document.documentElement.clientHeight;
+	var top = height*0.45;
+	var scrolled = (winScroll / height) * 100;
+	// console.log(scrolled)
+
+	if (scrolled <= 100) {
+		var fontSize = 100 - 0.7*scrolled;
+		var targetTop = top - top*scrolled*0.01 - 60*scrolled*0.01;
+		console.log(targetTop);
+		target.style.top = targetTop.toString() + "px";
+		target.style.fontSize = fontSize.toString() + "px";
+		target.style
+	}
+
+	
+
+}
