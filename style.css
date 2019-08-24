@@ -97,7 +97,10 @@ body {
 #append {
   height: 100vh;
   /*background-color: green;*/
-  
+  background-image: url("../images/Asset 6.svg");
+  background-position: right;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
   position: sticky;
   top: 68px;
 }
@@ -124,6 +127,10 @@ body {
 @keyframes typing {
   from, to { border-color: transparent }
 	50% { border-color: orange }
+}
+
+#target:hover {
+  
 }
 
 #hamburgerToggle:checked ~ #top {
