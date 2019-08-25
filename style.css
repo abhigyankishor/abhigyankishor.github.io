@@ -69,8 +69,7 @@ body {
   font-family: "Quicksand", sans-serif;
   font-size: 25px;
   font-weight: 700;
-  transition: opacity 5s;
-  -webkit-transition: display 5s;
+  
   /*display: none;
   				opacity: 0;*/
 }
@@ -97,15 +96,15 @@ body {
 #append {
   height: 100vh;
   /*background-color: green;*/
-  background-image: url("../images/Asset 6.svg");
-  background-position: right;
-  background-repeat: no-repeat;
   background-attachment: fixed;
   position: sticky;
   top: 68px;
 }
 
 #target {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
   display: inline-block;
   border-right: 0.1em solid orange;
   animation: 
