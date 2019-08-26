@@ -7,6 +7,7 @@ body {
   background-position: right;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  
 }
 
 /*.websiteContainer {
@@ -95,6 +96,8 @@ body {
 
 #append {
   height: 100vh;
+  /*background-color: #12043c;*/
+
   /*background-color: green;*/
   background-attachment: fixed;
   position: sticky;
@@ -102,6 +105,7 @@ body {
 }
 
 #target {
+
   text-decoration: none;
   color: white;
   cursor: pointer;
@@ -122,6 +126,8 @@ body {
 	height: 2000px;
 	background-color: green;
 }
+
+
 
 @keyframes typing {
   from, to { border-color: transparent }
