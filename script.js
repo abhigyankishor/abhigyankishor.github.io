@@ -31,6 +31,7 @@ function word() {
 	// j++;
 		if (j == 4) {
 	  		clearInterval(timerId);
+
 		}
 	toggle = 1;
 	}
@@ -48,9 +49,9 @@ function word() {
 		speed = 20;
 	}
 
-	if (j > 4) {
-		clearInterval(timerId);
-	}
+	// if (j > 4) {
+	// 	clearInterval(timerId);
+	// }
 
 	if (i < l[j].length && toggle != 1) {
 		target.innerHTML += l[j][i];
@@ -61,6 +62,9 @@ function word() {
 }
 
 word();
+// word();
+
+// target.addEventListener("click", word);
 
 //end of typewriter stuff		  
 
@@ -73,7 +77,7 @@ window.onscroll = function resizeAndMove(){
 	var height = document.documentElement.clientHeight;
 	var top = height*0.45;
 	var scrolled = (winScroll / height) * 100;
-	// console.log(scrolled)
+	console.log(scrolled)
 
 	if (scrolled <= 100) {
 		var fontSize = 100 - 0.7*scrolled;
@@ -81,7 +85,12 @@ window.onscroll = function resizeAndMove(){
 		// console.log(targetTop);
 		target.style.top = targetTop.toString() + "px";
 		target.style.fontSize = fontSize.toString() + "px";
-		target.style
+		
+	}
+
+	if (scrolled > 100) {
+		target.style.top = "-60px";
+		target.style.fontSize = "30px";
 	}
 
 	
